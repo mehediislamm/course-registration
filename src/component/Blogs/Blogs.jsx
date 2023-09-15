@@ -12,8 +12,8 @@ useEffect(()=>{
 },[])
 
     return (
-        <div className="md:w-2/3 ">
-           <h1>Blogs:{blogs.length}</h1>
+        <div className="md:w-2/3 grid lg:grid-cols-3 ">
+           
            {
             blogs.map(blog => <Blog
                  key={blog.ID}

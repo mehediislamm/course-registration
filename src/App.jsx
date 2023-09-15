@@ -40,7 +40,7 @@ function App() {
   return (
     <>
     <h1 className='text-6xl text-center'>Course Registration</h1>
-  <div className='md:flex ml-5'>
+  <div className='md:flex ml-5 '>
   <Blogs handleAddCoursename={handleAddCoursename}></Blogs>
   <Coursenames  remaining={remaining} totalCost={totalCost} coursename={coursename} ></Coursenames>
   </div>

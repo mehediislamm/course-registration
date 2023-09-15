@@ -3,16 +3,16 @@ import Coursename from '../Coursename/Coursename';
 
 const Coursenames = ({coursename, remaining, totalCost}) => {
     return (
-        <div className='md:w-1/3'>
-            <h2>CourseName:{coursename.length}</h2>
+        <div className='w-96 h-4/5 h-auto ml-10 bg-[#cad0d8] rounded-md'>
           
-            <h5>remaining:{remaining}</h5>
+            <h5 className='text-[#2F80ED] text-center'>Credit Hour Remaining {remaining} hr</h5>
             <hr />
+            <h2 className='text-xl text-center'>Course Name</h2>
             {
                 coursename.map(coursenames => <Coursename key={coursenames.ID} coursenames ={coursenames}></Coursename>)
             }
             <hr />
-            <h5>totalCost:{totalCost}</h5>
+            <h5 className='text-center'>totalCost:{totalCost}</h5>
         
         </div>
     );
