@@ -3,7 +3,7 @@ import Coursename from '../Coursename/Coursename';
 
 const Coursenames = ({coursename, remaining, totalCost}) => {
     return (
-        <div className='w-96 h-4/5 h-auto ml-10 bg-[#cad0d8] rounded-md'>
+        <div className='w-96 h-4/5  ml-10 bg-[#cad0d8] rounded-md'>
           
             <h5 className='text-[#2F80ED] text-center'>Credit Hour Remaining {remaining} hr</h5>
             <hr />

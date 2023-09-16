@@ -3,6 +3,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Swal from 'sweetalert2'
 
 import Blogs from './component/Blogs/Blogs'
 import Coursenames from './component/Coursenames/Coursenames'
@@ -15,7 +16,15 @@ function App() {
   const isExit = coursename.find((item)=>item.ID ==blog.ID);
   let count = blog.Reading_Time;
   if(isExit){
-   return alert('already exit');
+    Swal.fire({
+      title: 'Sorry, you have used this cart',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
   }
   else{
     coursename.forEach((item)=>{
@@ -23,7 +32,15 @@ function App() {
     })
     const totalRemaining = 20-count;
     if(count > 20){
-      return alert('taka ses r hobe na')
+      Swal.fire({
+        title: 'Sorry, Time exceeded 20 hours!',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
     }
  else{
   setTotalCost(count);
